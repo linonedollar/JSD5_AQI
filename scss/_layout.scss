@@ -1,7 +1,26 @@
 .warp{
-  background-color: #E5E5E5;
+  background-color: $bgcolor;
 }
 .container{
   margin: 0 auto;
   max-width: 1280px;
+  padding-right: 85px;
+  padding-left: 85px;
+}
+
+.footer{
+  background-color: #000000;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  .footerInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#FFFFFF;
+    font-family: $EngFont;
+    line-height: 22px;
+    h5{
+      font-family: $TradFont;
+    }
+  }
 }

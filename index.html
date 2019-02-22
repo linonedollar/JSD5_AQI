@@ -9,8 +9,129 @@
 </head>
 <body>
   <div class="warp">
-    <div class="container">
+    <div class="container fixHeight">
+      <div class="nav">
+        <div class="selectBlock">
+          <h1>空氣品質指標 (AQI)</h1>
+          <select name="" id="selectCountry">
+            <option value="">請選擇地區</option>
+          </select>
+        </div>
+        <table class="statusColorTable">
+          <thead>
+            <tr>
+              <th class="status great">0～50</th>
+              <th class="status normal">51～100</th>
+              <th class="status ok">101～150</th>
+              <th class="status notGood">151～200</th>
+              <th class="status myGod">201～300</th>
+              <th class="status danger">301～400</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>良好</td>
+              <td>普通</td>
+              <td>對敏感族群<br>不健康</td>
+              <td>對所有族群<br>不健康</td>
+              <td>非常不健康</td>
+              <td>危害</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hrLine">
+        <h2>高雄市</h2>
+        <span></span>
+        <p>
+          <span class="update">2019-01-24 14:00</span>更新
+        </p>
+      </div>
+      <div class="dashboard">
+        <div class="detail">
+          <div class="miniAQI">
+            <span class="ondetail">前金</span>
+            <span class="status notGood">156</span>
+          </div>
+          <ul>
+            <li>
+              <p>
+                臭氧<span class="engName">O3 (ppb)</span><span>82</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                懸浮微粒<span class="engName">PM10 (μg/m³)</span><span>72</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                細懸浮微粒<span class="engName">PM2.5 (μg/m³)</span><span>67</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                一氧化碳<span class="engName">CO (ppm)</span><span>0.49</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                二氧化硫<span class="engName">SO2 (ppb)</span><span>3.4</span>
+              </p>
+            </li>
+            <li>
+              <p>
+                二氧化氮<span class="engName">NO2 (ppb)</span><span>13</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <ul class="resultList">
+          <li>
+            <div class="miniAQI">
+              <span>前金</span>
+              <span class="status notGood">156</span>
+            </div>
+          </li>
+          <li>
+            <div class="miniAQI">
+              <span>復興</span>
+              <span class="status notGood">159</span>
+            </div>
+          </li>
+          <li>
+            <div class="miniAQI">
+              <span>楠梓</span>
+              <span class="status myGod">206</span>
+            </div>
+          </li>
+          <li>
+            <div class="miniAQI">
+              <span>前鎮</span>
+              <span class="status ok">145</span>
+            </div>
+          </li>
+          <li>
+            <div class="miniAQI">
+              <span>仁武</span>
+              <span class="status notGood">158</span>
+            </div>
+          </li>
+          <li>
+            <div class="miniAQI">
+              <span>小港</span>
+              <span class="status ok">126</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="container footerInfo">
+        <h5>資料來源：行政院環境保護署</h5>
+        <p>Copyright © 2019 HexSchool. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
   <script src="./js/all.js"></script>
 </body>
