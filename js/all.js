@@ -12,6 +12,7 @@ var app = new Vue({
       const vm = this;
       const apiUrl = 'https://script.google.com/macros/s/AKfycbwXCxXw9Fy0Wu7LRm0wr2jraUgqdr6tm6SyqYBvNc69If_RtWs0/exec?url=http://opendata.epa.gov.tw/webapi/Data/REWIQA/?format=json';
       vm.isLoading = true;
+      // 使用 axios 套件
       axios({
         method:'get',
         url:apiUrl,
@@ -27,6 +28,31 @@ var app = new Vue({
         vm.isLoading = false;
         console.log('取得資料失敗:' + error);
       });
+
+      //自己寫 練習 promise
+      // let promise = new Promise((resolve, reject) => {
+      //   let xhr = new XMLHttpRequest();
+      //   xhr.open('get', apiUrl, true);
+      //   xhr.send(null);
+      //   xhr.onload = () =>{
+      //     if (xhr.status >= 200 && xhr.status < 400) {
+      //       resolve(xhr.response);
+      //     } else {
+      //       reject("取得資料失敗: " + xhr.status);
+      //     }
+      //   }
+      // });
+      // promise.then((res) => {
+      //   vm.allData = JSON.parse(res);
+      //   vm.updateTime = vm.getTime();
+      //   vm.Detail = vm.initDetail();
+      //   vm.isLoading = false;			
+      // });
+      // promise.catch((error) => {
+      //   vm.updateTime = vm.getTime();
+      //   vm.isLoading = false;
+      //   console.log(error);
+      // });
     },
     getTime(){
       const now = new Date();
